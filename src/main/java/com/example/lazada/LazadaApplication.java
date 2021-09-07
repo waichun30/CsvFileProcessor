@@ -1,6 +1,7 @@
 package com.example.lazada;
 
 import com.example.lazada.service.ApacheCsvFileService;
+import com.example.lazada.service.JacksonCsvFileService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,6 +13,11 @@ public class LazadaApplication {
 
         ApacheCsvFileService apacheCsvReader = new ApacheCsvFileService();
         apacheCsvReader.process();
+
+        JacksonCsvFileService service = new JacksonCsvFileService();
+        service.process();
+
+
     }
 
 }
